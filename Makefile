@@ -15,7 +15,10 @@ $(OBJS): $(SRCS)
 setup :
 	sqlite3 sample.db < schema.sql
 
+run :
+	./$(TATGET)
+
 all : clean $(OBJS) $(TATGET)
 
 clean:
-	rm -f $(OBJS) $(TATGET)
+	rm -f $(OBJS) $(TATGET) *.db
